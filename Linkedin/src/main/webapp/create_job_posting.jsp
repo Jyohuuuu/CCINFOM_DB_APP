@@ -68,7 +68,7 @@
             <div class="form-group">
                 <button onclick="window.location.href='company_homepage.jsp'">Back</button>
             </div>
-            <form action="submit_job_posting.jsp" method="POST">
+            <form id="jobPostingForm" onsubmit="return validateForm()">
                 <div class="form-group">
                     <label for="position-id">Job Position</label>
                     <select id="position-id" name="position_ID" required>
@@ -149,5 +149,16 @@
                 </div>
             </form>
         </div>
+
+        <script>
+            function validateForm() {
+                var yearsOfExperience = document.getElementById("yearsOfExperience").value;
+                if (yearsOfExperience < 0 || !Number.isInteger(Number(yearsOfExperience))) {
+                    alert("Please enter a valid number of years of experience.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </body>
 </html>
