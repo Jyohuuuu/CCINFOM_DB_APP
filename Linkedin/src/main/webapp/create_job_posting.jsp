@@ -65,6 +65,9 @@
     <body>
         <div class="container">
             <h1>Create Job Posting</h1>
+            <div class="form-group">
+                <button onclick="window.location.href='company_homepage.jsp'">Back</button>
+            </div>
             <form action="submit_job_posting.jsp" method="POST">
                 <div class="form-group">
                     <label for="position-id">Job Position</label>
