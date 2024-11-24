@@ -1,0 +1,6 @@
+link\UserAccount_Record_Management.class
+link\job_application.class
+link\job_posting.class
+com\mycompany\linkedin\JakartaRestConfiguration.class
+link\login_logic.class
+com\mycompany\linkedin\resources\JakartaEE10Resource.class

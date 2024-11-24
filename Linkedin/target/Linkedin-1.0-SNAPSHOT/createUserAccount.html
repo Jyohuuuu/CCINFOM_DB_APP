@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+        }
+        .form-container {
+            min-height: auto;
+            display: flex; 
+            flex-direction: column;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-actions .clear {
+            background-color: #ccc;
+        }
+        .form-actions .submit {
+            background-color: #0044cc;
+            color: white;
+        }
+        .form-actions .submit:hover {
+            background-color: #003399;
+        }
+        .form-actions .clear:hover {
+            background-color: #bbb;
+        }
+        .back-button {
+            display: block;
+            padding: 10px; 
+            margin-top: 20px;
+            background-color: #ccc; 
+            color: black;
+            text-decoration: none;
+            border: none; 
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Create User Account</h1>
+        <form action="submitAcc.jsp" method="POST">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-no">Contact No</label>
+                <input type="text" id="contact-no" name="contact_no">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="home-address">Home Address</label>
+                <input type="text" id="home-address" name="home_address">
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday</label>
+                <input type="date" id="birthday" name="birthday">
+            </div>
+            <div class="form-group">
+                <label for="education">Education</label>
+                <select id="education" name="education">
+                    <option value="None">None</option>
+                    <option value="High School">High School</option>
+                    <option value="Bachelors">Bachelors</option>
+                    <option value="Masters">Masters</option>
+                    <option value="PhD">PhD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="years-of-experience">Years of Experience</label>
+                <input type="text" id="years-of-experience" name="years_of_experience">
+            </div>
+            <div class="form-group">
+                <label for="primary-language">Primary Language</label>
+                <input type="text" id="primary-language" name="primary_language" required>
+            </div>
+            <div class="form-group">
+                <label for="job-id">Job ID</label>
+                <input type="number" id="job-id" name="job_ID">
+            </div>
+            <div class="form-group">
+                <label for="company-id">Company ID</label>
+                <input type="number" id="company-id" name="company_ID">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-actions">
+                <button type="reset" class="clear">Clear</button>
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+        <a href="index.html" class="back-button">Back to Login</a>
+    </div>
+</body>
+</html>
